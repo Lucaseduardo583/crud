@@ -13,6 +13,8 @@ include "conexao.php";
         <th>DESCRIÇÃO</th>
         <th>PREÇO</th>
         <th>CATEGORIA</th>
+        <th>AÇÕES</th>
+        <th>EDITAR</th>
     </tr>
 
 <?php
@@ -22,10 +24,23 @@ $resultado = mysqli_query($conexao, $sql);
 
 while($linha = mysqli_fetch_assoc($resultado)){
     echo "<tr>";
-    echo "<td>" . $linha['servico'] . "</td>";
-    echo "<td>" . $linha['descricao'] . "</td>";
-    echo "<td>" . $linha['preco'] . "</td>";
-    echo "<td>" . $linha['categoria'] . "</td>";
+    echo "<td> {$linha['servico']} </td>";
+    echo "<td> {$linha['descricao']} </td>";
+    echo "<td> {$linha['preco']} </td>";
+    echo "<td> {$linha['categoria']} </td>";
+
+    echo "<td>";
+    echo "<a href ='servicos-excluir.php?id={$linha['id']}'>";
+    echo "<img src='excluir.png' width='25'>";
+    echo "</a>";
+
+    echo "<td>";
+    echo "<a href ='servicos-editar.php?id={$linha['id']}'>";
+    echo "<img src='editar.png' width='25'>";
+    echo "</a>";
+
+    echo "</td>";
+
     echo "</tr>";
 }
 
