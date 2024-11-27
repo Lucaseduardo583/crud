@@ -2,10 +2,10 @@
 <?php
 $id = $_GET['id'];
 $sql = "select * from servicos where id = $id";
-$servicos = $descricao = $preco = $categoria = "";
+$servico = $descricao = $preco = $categoria = "";
 
 include "conexao.php";
-$resultado = mysqli_query($conexao, $sql);
+$resultado = mysqli_query($conexao,$sql);
 while($linha = mysqli_fetch_assoc($resultado)){
     $servico = $linha['servico'];
     $descricao = $linha['descricao'];
@@ -16,15 +16,13 @@ while($linha = mysqli_fetch_assoc($resultado)){
 mysqli_close($conexao);
 
 ?>
-
 <main>
     <h2>Editar serviço</h2>
-    <form method="post" action="servicos-atualizar.php?id<?=$id;?>">
-        
+    <form method="post" action="servicos-atualizar.php?id=<?=$id;?>">
         <label>Serviço: <input name="servico" value="<?=$servico;?>"></label> <br>
         <label>Descrição: <input name="descricao" value="<?=$descricao;?>"></label> <br>
         <label>Preço: <input name="preco" value="<?=$preco;?>"></label> <br>
-        <label>Categoria: <input name="categoria" value="<?=$categoria;?>"></label> <br><br>
+        <label>Categoria: <input name="categoria" value="<?=$categoria;?>"></label> <br>
 
         <button type="submit">Salvar</button>
     </form>

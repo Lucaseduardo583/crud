@@ -7,7 +7,7 @@
 </head>
 <body>
     <header>
-        <h1> Sistema de Cabeleireiro ✂🧔</h1>
+        <h1>✂🧔 Sistema de Cabeleireiro ✂🧔</h1>
         <nav>
             <a href="servicos-listar.php">Serviços</a>
             <a href="clientes-listar.php">Clientes</a>
