@@ -4,7 +4,7 @@
 $id = $_GET['id'];
 
 // montar um sql de delete
-$sql = "delete from agendas where id = $id";
+$sql = "delete from produtos where id = $id";
 
 // incluir o arquivo de conexão
 include "conexao.php";
@@ -16,6 +16,6 @@ $resultado = mysqli_query($conexao, $sql);
 mysqli_close($conexao);
 
 // redirecionar para a página listar
-header("Location: agendas-listar.php");
+header("Location: produtos-listar.php");
 
 ?>

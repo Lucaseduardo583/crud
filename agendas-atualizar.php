@@ -1,13 +1,13 @@
 <?php
 // requisitar os dados do formulário
 $id = $_GET['id'];
-$nome = $_POST['nome'];
-$idade = $_POST['idade'];
-$endereco = $_POST['endereco'];
-$telefone = $_POST['telefone'];
+$funcionario = $_POST['funcionario'];
+$data = $_POST['data'];
+$horario = $_POST['horario'];
+$servico = $_POST['servico'];
 
 // montar um sql de update
-$sql = "update clientes set nome  = '$nome', idade = '$idade', endereco = '$endereco', telefone = '$telefone' where id = $id ";
+$sql = "update agendas set funcionario  = '$funcionario', data = '$data', horario = '$horario', servico = '$servico' where id = $id ";
 
 // incluir o arquivo de conexão
 include "conexao.php";
@@ -19,5 +19,5 @@ $resultado = mysqli_query($conexao, $sql);
 mysqli_close($conexao);
 
 // redirecionar para a página listar
-header("Location: clientes-listar.php");
+header("Location: agendas-listar.php");
 ?>

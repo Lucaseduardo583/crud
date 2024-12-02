@@ -1,14 +1,14 @@
 <?php
 
 // requisitar os dados do formulário
-$nome = $_POST["nome"];
-$idade = $_POST["idade"];
-$endereco = $_POST["endereco"];
-$telefone = $_POST["telefone"];
+$funcionario = $_POST["funcionario"];
+$data = $_POST["data"];
+$horario = $_POST["horario"];
+$servico = $_POST["servico"];
 
 // montar um sql de insert
-$sql = "insert into clientes(nome, idade, endereco, telefone)
-values('$nome', '$idade', '$endereco', '$telefone')";
+$sql = "insert into agendas(funcionario, data, horario, servico)
+values('$funcionario', '$data', '$horario', '$servico')";
 
 // incluir o arquivo de conexão
 include "conexao.php";
@@ -20,6 +20,6 @@ $resultado = mysqli_query($conexao, $sql);
 mysqli_close($conexao);
 
 // redirecionar para a página listar
-header("Location: clientes-listar.php");
+header("Location: agendas-listar.php");
 
 ?>
