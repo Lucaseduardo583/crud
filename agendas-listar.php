@@ -4,8 +4,8 @@ include "conexao.php";
 ?>
 <main>
 
-<h2>Todas as agendas</h2>
-<a href="agendas-cadastro.php">Adicionar nova Agendas</a>
+<h2>Todas as Agendas</h2>
+<a href="agendas-cadastro.php">Adicionar nova Agenda</a>
 
 <table border="2">
     <tr>
@@ -13,6 +13,8 @@ include "conexao.php";
         <th>DATA</th>
         <th>HORÁRIO</th>
         <th>SERVIÇO</th>
+        <th>DELETAR</th>
+        <th>EDITAR</th>
     </tr>
 
 <?php

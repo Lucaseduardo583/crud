@@ -2,14 +2,14 @@
 
 // requisitar os dados do formulário
 $nome = $_POST["nome"];
-$categoria = $_POST["categoria"];
-$descricao = $_POST["descricao"];
-$validade = $_POST["validade"];
-$preco = $_POST["preco"];
+$telefone = $_POST["telefone"];
+$email = $_POST["email"];
+$endereco = $_POST["endereco"];
+$produto = $_POST["produto"];
 
 // montar um sql de insert
-$sql = "insert into produtos(nome, categoria, descricao, validade, preco)
-values('$nome', '$categoria', '$descricao', '$validade', '$preco')";
+$sql = "insert into fornecedores(nome, telefone, email, endereco, produto)
+values('$nome', '$telefone', '$email', '$endereco', '$produto')";
 
 // incluir o arquivo de conexão
 include "conexao.php";
@@ -21,6 +21,6 @@ $resultado = mysqli_query($conexao, $sql);
 mysqli_close($conexao);
 
 // redirecionar para a página listar
-header("Location: produtos-listar.php");
+header("Location: fornecedores-listar.php");
 
 ?>

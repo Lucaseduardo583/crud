@@ -2,13 +2,13 @@
 // requisitar os dados do formulário
 $id = $_GET['id'];
 $nome = $_POST['nome'];
-$categoria = $_POST['categoria'];
-$descricao = $_POST['descricao'];
-$validade = $_POST['validade'];
-$preco = $_POST['preco'];
+$telefone = $_POST['telefone'];
+$email = $_POST['email'];
+$endereco = $_POST['endereco'];
+$produto = $_POST['produto'];
 
 // montar um sql de update
-$sql = "update produtos set nome = '$nome', categoria = '$categoria', descricao = '$descricao', validade = '$validade', preco = '$preco' where id = $id ";
+$sql = "update fornecedores set nome = '$nome', telefone = '$telefone', email = '$email', endereco = '$endereco', produto = '$produto' where id = $id ";
 
 // incluir o arquivo de conexão
 include "conexao.php";
@@ -20,5 +20,5 @@ $resultado = mysqli_query($conexao, $sql);
 mysqli_close($conexao);
 
 // redirecionar para a página listar
-header("Location: produtos-listar.php");
+header("Location: fonecedores-listar.php");
 ?>

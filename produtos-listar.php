@@ -4,7 +4,7 @@ include "conexao.php";
 ?>
 <main>
 
-<h2>Todas os Produtos</h2>
+<h2>Todos os Produtos</h2>
 <a href="produtos-cadastro.php">Adicionar novo produto</a>
 
 <table border="2">
@@ -14,6 +14,8 @@ include "conexao.php";
         <th>DESCRIÇÃO</th>
         <th>VALIDADE</th>
         <th>PREÇO</th>
+        <th>DELETAR</th>
+        <th>EDITAR</th>
     </tr>
 
 <?php
@@ -25,7 +27,7 @@ while($linha = mysqli_fetch_assoc($resultado)){
     echo "<tr>";
     echo "<td> {$linha['nome']} </td>";
     echo "<td> {$linha['categoria']} </td>";
-    echo "<td> {$linha['horario']} </td>";
+    echo "<td> {$linha['descricao']} </td>";
     echo "<td> {$linha['validade']} </td>";
     echo "<td> {$linha['preco']} </td>";
 

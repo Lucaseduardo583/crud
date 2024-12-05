@@ -11,7 +11,7 @@ while($linha = mysqli_fetch_assoc($resultado)){
     $categoria = $linha['categoria'];
     $descricao = $linha['descricao'];
     $validade = $linha['validade'];
-    $preço = $linha['preço'];
+    $preço = $linha['preco'];
 }
 
 mysqli_close($conexao);

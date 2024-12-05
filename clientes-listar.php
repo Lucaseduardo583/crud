@@ -4,7 +4,7 @@ include "conexao.php";
 ?>
 <main>
 
-<h2>Todos os serviços</h2>
+<h2>Todos os Serviços</h2>
 <a href="clientes-cadastro.php">Adicionar novo Cliente</a>
 
 <table border="2">
@@ -13,7 +13,8 @@ include "conexao.php";
         <th>IDADE</th>
         <th>ENDEREÇO</th>
         <th>TELEFONE</th>
-        <th>AÇÕES</th>
+        <th>DELETAR</th>
+        <th>EDITAR</th>
     </tr>
 
 <?php
